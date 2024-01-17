@@ -30,10 +30,11 @@
     let newFood = " Burgers ";
     favFoods.push(newFood);
     foodElement.innerHTML += `<br> ${favFoods}`;
-    favFoods.shift()
-    foodElement.innerHTML += `<br> ${favFoods}`;
     favFoods.pop()
     foodElement.innerHTML += `<br>${favFoods}`;
+    favFoods.shift()
+    foodElement.innerHTML += `<br> ${favFoods}`;
+    
 
 
 
