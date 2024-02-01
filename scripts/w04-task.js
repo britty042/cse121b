@@ -8,35 +8,37 @@ let myProfile = {
         alt: "Brittney Child",
     },
     favoriteFoods: ["Mashed Potatoes", "Fresh Garden Tomatoes", "Chocolate", "Cookies", "Ice cream"],
-    hobbies: ["Reading", "Sewing", "Sports", "Cheering my kids on in their activities", "Anything with Pictures"],
+    hobbies: ["Reading", "Sewing", "Sports", "Cheering for my kids", "Anything with Pictures"],
     placesLived: [],
 }
 
 /* Populate Profile Object with placesLive objects */
-myProfile.placesLived.push(
+myProfile.placesLived = [
     {
         place: "Kaysville, UT",
         length: "18 years",
-    
+    },
+    {
         place: "Rexburg, ID",
         length: "2 years",
-    
+    },
+    {
         place: "Roy, UT",
         length: "3 years",
-   
+    },
+    {
         place: "Clinton, UT",
-        legnth: "12 years",
-    }
-)
-
+        length: "12 years",
+    },
+]
 /* DOM Manipulation - Output */
 
 /* Name */
 document.querySelector("#name").innerHTML = myProfile.name;
 
 /* Photo with attributes */
-document.querySelector("#photo").src = myProfile.photo.src,
-document.querySelector("#photo").alt = myProfile.photo.alt,
+document.querySelector("#photo").src = myProfile.photo.src;
+document.querySelector("#photo").alt = myProfile.photo.alt;
 
 /* Favorite Foods List*/
 myProfile.favoriteFoods.forEach(food => {
@@ -55,17 +57,32 @@ myProfile.hobbies.forEach(hobby => {
 )
 
 /* Places Lived DataList */
-let dt = document.createElement("dt");
+myProfile.placesLived.forEach(location => {
+    let d1 = document.createElement("d1");
+
+    let dt = document.createElement("dt");
+    dt.textContent = `Place: ${location.place}`;
+
+    let dd = document.createElement("dd");
+    dd.textContent = `Length: ${location.length}`;
+
+    d1.appendChild(dt);
+    d1.appendChild(dd);
+
+    document.getElementById("places-lived").appendChild(d1);
+})
+/*let dt = document.createElement("dt");
 let dd = document.createElement("dd");
 
 myProfile.placesLived.forEach(location => {
     
     dt.textContent = location.place;
-    document.getElementById("places-lived").appendChild(dt);
-
+    dt.textContent = location.length;
+    document.getElementById("places-lived").appendChild(`Place: ${dt}, Length: ${dd}`);
+})
     
     dt.textContent = location.length;
-    document.getElementById("places-lived").appendChild(dd);
-})
+    document.getElementById("places-lived").appendChild(dd);*/
+
 
 
