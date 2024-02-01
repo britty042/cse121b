@@ -17,16 +17,15 @@ myProfile.placesLived.push(
     {
         place: "Kaysville, UT",
         length: "18 years",
-
+    
         place: "Rexburg, ID",
         length: "2 years",
-
+    
         place: "Roy, UT",
         length: "3 years",
-
+   
         place: "Clinton, UT",
         legnth: "12 years",
-
     }
 )
 
@@ -56,20 +55,17 @@ myProfile.hobbies.forEach(hobby => {
 )
 
 /* Places Lived DataList */
-let placesList = document.getElementById("places-lived");
-myProfile.placesLived.forEach(location => {
-    let dt = document.createElement("dt");
-    dt.textContent = location.place;
-    placesList.appendChild(dt);
+let dt = document.createElement("dt");
+let dd = document.createElement("dd");
 
-    let dd = document.createElement("dd");
+myProfile.placesLived.forEach(location => {
+    
+    dt.textContent = location.place;
+    document.getElementById("places-lived").appendChild(dt);
+
+    
     dt.textContent = location.length;
-    placesList.appendChild(dd);
+    document.getElementById("places-lived").appendChild(dd);
 })
 
-/*
-myProfile.placesLived.forEach(length=> {
-    let dd = document.createElement("dd");
-    dt.textContent = length;
-    placesList.appendChild(dd);
-})*/
+
