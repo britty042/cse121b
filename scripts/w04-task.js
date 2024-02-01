@@ -71,18 +71,7 @@ myProfile.placesLived.forEach(location => {
 
     document.getElementById("places-lived").appendChild(d1);
 })
-/*let dt = document.createElement("dt");
-let dd = document.createElement("dd");
 
-myProfile.placesLived.forEach(location => {
-    
-    dt.textContent = location.place;
-    dt.textContent = location.length;
-    document.getElementById("places-lived").appendChild(`Place: ${dt}, Length: ${dd}`);
-})
-    
-    dt.textContent = location.length;
-    document.getElementById("places-lived").appendChild(dd);*/
 
 
 
