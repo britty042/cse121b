@@ -17,16 +17,13 @@ myProfile.placesLived.push(
     {
         place: "Kaysville, UT",
         length: "18 years",
-    }
-    {
+    
         place: "Rexburg, ID",
         length: "2 years",
-    }
-    {
+    
         place: "Roy, UT",
         length: "3 years",
-    }
-    {
+   
         place: "Clinton, UT",
         legnth: "12 years",
     }
