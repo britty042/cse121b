@@ -39,31 +39,14 @@ const displayDogs = async (dogs) => {
 }
 
 const alphabeticalDogs = (dogs) => {
-    return dogs.sort((x,y) =>
-    { 
-        if(x.dog_name.tolowerCase() > y.dog_name.toLowerCase())
-        {
-            return 1;
-        }
-        else
-        {
-            if(y.dog_name.toLowerCase() > x.dog_name.toLowerCase())
-            {
-                return -1;
-            }
-            else
-            {
-            return 0;
-            }
-        }
-    })
+    return dogs.sort((x,y) => (x.dog_name.toLowerCase() > y.dog_name.toLowerCase())  ? 1 : ((y.dog_name.toLowerCase() > x.dog_name.toLowerCase()) ? -1 : 0));
 }
 
 /*Reset the list*/
 const resetDogs = () => {
     dogsElement.innerHTML = "";
 }
-/*Sort Dogs function*/  
+/*Sort Dogs function*/
 const filterDogs = (dogs) => {
     resetDogs();
     let filter = document.getElementById("filtered").value;
@@ -73,6 +56,7 @@ const filterDogs = (dogs) => {
         case "firstalphabet":
             let firstHalfDogs =  dogs.filter(dog => dog.dog_name.charAt(0).toLowerCase() >=  "a" && dog.dog_name.charAt(0).toLowerCase() <= "m");
             displayDogs(firstHalfDogs);
+            break;
 
     /*Names starting with N-Z*/
         case "secondalphabet":
