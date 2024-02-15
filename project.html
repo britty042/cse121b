@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE 121b | W06: Final Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/final.css">
+</head>
+
+<body>
+    <nav>
+        <ul id="menu">
+          <li><a id="toggleMenu">&equiv;</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="w01-task.html">W1 Task</a></li>
+          <li><a href="w03-task.html">W3 Task</a></li>
+          <li><a href="w04-task.html">W4 Task</a></li>
+          <li><a href="w05-task.html" class="active">W5 Task</a></li>
+          <li><a href="project.html">Project</a></li>
+        </ul>
+      </nav>
+  <main id="doggrid">
+    <h1>W06: Final Programming Project</h1>
+    <h2>Dogs of Cambridge</h2>
+
+    <select id="filtered" title="Choose a data filter.">
+      <option value="" disabled selected>Filter Dogs</option>
+      <option value="firstalphabet">Names A-M</option>
+      <option value="secondalphabet">Names N-Z</option>
+      <option value="goldendoodles">Goldendoodles</option>
+      <option value="labrador">Types of Labradors</option>
+      <option value="poodles">Types of Poodles</option>
+      <option value="mixedbreed">Mixed Breeds</option>
+      <option value="cambridgeport">Located in Cambridgeport</option>
+      <option value="all">Display All</option>
+    </select>
+
+    <div id="dogs">
+    </div>
+  </main>
+
+
+  <footer>
+    &copy;<span id="year"></span> | Week 06 - Final Project: Dogs of Cambridge | CSE 121b
+  </footer>
+  <script src="scripts/main.js" type ="text/javascript"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script src="scripts/project.js"></script>
+</body>
+
+</html>
